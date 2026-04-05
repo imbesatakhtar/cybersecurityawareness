@@ -3,6 +3,7 @@ services:
   - type: web
     name: secure-auth-api
     env: node
+    plan: free
     rootDir: server
     buildCommand: npm install
     startCommand: npm start
@@ -22,6 +23,7 @@ services:
   - type: web
     name: secure-auth-client
     env: static
+    plan: free
     rootDir: client
     buildCommand: npm install && npm run build
     staticPublishPath: dist
