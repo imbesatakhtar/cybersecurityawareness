@@ -10,8 +10,8 @@ const features = [
 ];
 
 const colors = {
-  cyan:    { card: 'border-cyan-500/15 hover:border-cyan-500/30', icon: 'text-cyan-400', glow: 'hover:shadow-cyan-500/8' },
-  purple:  { card: 'border-purple-500/15 hover:border-purple-500/30', icon: 'text-purple-400', glow: 'hover:shadow-purple-500/8' },
+  cyan: { card: 'border-cyan-500/15 hover:border-cyan-500/30', icon: 'text-cyan-400', glow: 'hover:shadow-cyan-500/8' },
+  purple: { card: 'border-purple-500/15 hover:border-purple-500/30', icon: 'text-purple-400', glow: 'hover:shadow-purple-500/8' },
   emerald: { card: 'border-emerald-500/15 hover:border-emerald-500/30', icon: 'text-emerald-400', glow: 'hover:shadow-emerald-500/8' }
 };
 
@@ -23,7 +23,7 @@ const Home = () => (
 
       <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', duration: 0.5, delay: 0.1 }}
         className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/8 border border-cyan-500/15 text-cyan-400 text-xs font-medium mb-8">
-        <HiShieldCheck className="text-sm" /> BCA Final Year Cybersecurity Project
+        <HiShieldCheck className="text-sm" /> BCA CyberSecurity Project
       </motion.div>
 
       <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
