@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+
 import Navbar from '../components/Navbar';
 import { Toaster } from 'react-hot-toast';
 import { HiShieldCheck } from 'react-icons/hi';
@@ -18,22 +18,10 @@ const MainLayout = () => {
 
       <Navbar />
 
-      {/* Page Content */}
       <main className="pt-24 sm:pt-28 pb-16">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={location.pathname}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.35, ease: 'easeOut' }}
-          >
-            <Outlet />
-          </motion.div>
-        </AnimatePresence>
+        <Outlet />
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-white/[0.04] py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div className="flex items-center gap-2">

@@ -18,7 +18,6 @@ const colors = {
 const Home = () => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    {/* ── Hero ── */}
     <section className="text-center py-16 sm:py-20 md:py-28 relative">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[480px] h-[340px] sm:h-[480px] rounded-full bg-cyan-500/[0.04] blur-[100px] pointer-events-none" />
 
@@ -46,7 +45,6 @@ const Home = () => (
       </motion.div>
     </section>
 
-    {/* ── Features ── */}
     <motion.section variants={staggerContainer} initial="initial" whileInView="animate" viewport={{ once: true, margin: '-80px' }}
       className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 pb-16 sm:pb-20">
       {features.map((f, i) => {
@@ -67,7 +65,6 @@ const Home = () => (
       })}
     </motion.section>
 
-    {/* ── Tech Stack ── */}
     <motion.section initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
       className="text-center pb-20">
       <h2 className="text-lg font-semibold text-white mb-6">Built With</h2>

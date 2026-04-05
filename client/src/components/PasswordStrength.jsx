@@ -1,18 +1,8 @@
-/**
- * Password Strength Indicator Component
- * 
- * SECURITY CONCEPT: Password Strength Feedback
- * 
- * Provides real-time visual feedback about password strength.
- * Checks for: length, uppercase, lowercase, numbers, special chars.
- * Encourages users to create strong passwords.
- */
-
 import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 const PasswordStrength = ({ password }) => {
-  // Calculate password strength score (0-5)
+
   const analysis = useMemo(() => {
     if (!password) return { score: 0, label: '', color: '', checks: [] };
 
@@ -30,7 +20,6 @@ const PasswordStrength = ({ password }) => {
       if (check.passed) score++;
     });
 
-    // Determine strength level
     let label, color, bgColor;
     if (score <= 1) {
       label = 'Very Weak';
@@ -66,7 +55,7 @@ const PasswordStrength = ({ password }) => {
       exit={{ opacity: 0, height: 0 }}
       className="mt-3 space-y-3"
     >
-      {/* Strength Bar */}
+      
       <div className="space-y-1.5">
         <div className="flex justify-between items-center">
           <span className="text-xs text-slate-500">Password Strength</span>
@@ -85,7 +74,6 @@ const PasswordStrength = ({ password }) => {
         </div>
       </div>
 
-      {/* Checklist */}
       <div className="grid grid-cols-2 gap-1.5">
         {analysis.checks.map((check, index) => (
           <motion.div

@@ -53,7 +53,7 @@ const LearnSecurity = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Header */}
+      
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8 sm:mb-10">
         <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/8 border border-emerald-500/15 text-emerald-400 text-xs font-medium mb-4">
           <HiAcademicCap /> Cybersecurity Learning Module
@@ -64,7 +64,6 @@ const LearnSecurity = () => {
         <p className="text-sm text-slate-400 max-w-xl mx-auto">Understand the cybersecurity concepts used in this project. Written for BCA students.</p>
       </motion.div>
 
-      {/* Accordion */}
       <motion.div variants={staggerContainer} initial="initial" animate="animate" className="space-y-3">
         {sections.map((s, idx) => {
           const c = colorClasses[s.color];
@@ -104,7 +103,6 @@ const LearnSecurity = () => {
         })}
       </motion.div>
 
-      {/* Resources */}
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}
         className="text-center mt-8 mb-6 p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
         <h3 className="text-sm font-semibold text-white mb-3">📚 Want to Learn More?</h3>

@@ -41,7 +41,7 @@ const Dashboard = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Header */}
+      
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
@@ -61,7 +61,6 @@ const Dashboard = () => {
         </div>
       </motion.div>
 
-      {/* Stat Cards */}
       <motion.div variants={staggerContainer} initial="initial" animate="animate" className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
         {statCards.map((s, i) => (
           <motion.div key={i} variants={staggerItem} whileHover={{ y: -3 }}
@@ -74,7 +73,7 @@ const Dashboard = () => {
       </motion.div>
 
       <div className="grid lg:grid-cols-3 gap-5">
-        {/* Logs Table */}
+        
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
           className="lg:col-span-2 rounded-2xl bg-[rgba(12,12,32,0.6)] border border-white/[0.06] overflow-hidden">
           <div className="px-5 py-3.5 border-b border-white/[0.06] flex items-center justify-between">
@@ -107,7 +106,6 @@ const Dashboard = () => {
           </div>
         </motion.div>
 
-        {/* Tips */}
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}
           className="rounded-2xl bg-[rgba(12,12,32,0.6)] border border-white/[0.06] overflow-hidden">
           <div className="px-5 py-3.5 border-b border-white/[0.06]">

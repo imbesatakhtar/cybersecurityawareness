@@ -40,7 +40,7 @@ const Signup = () => {
         className="w-full max-w-[420px]">
 
         <div className="p-7 sm:p-9 rounded-2xl bg-[rgba(12,12,32,0.85)] backdrop-blur-xl border border-white/[0.06] shadow-2xl">
-          {/* Header Icon */}
+          
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.15, type: 'spring', stiffness: 180 }}
             className="w-14 h-14 mx-auto mb-5 rounded-xl bg-gradient-to-br from-purple-500/15 to-cyan-500/15 border border-purple-500/15 flex items-center justify-center">
             <HiUserAdd className="text-2xl text-purple-400" />
@@ -50,7 +50,7 @@ const Signup = () => {
           <p className="text-sm text-slate-400 text-center mb-7">Join the secure platform</p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Full Name */}
+            
             <div>
               <label className="block text-xs font-medium text-slate-400 mb-1.5">Full Name</label>
               <div className="relative">
@@ -60,7 +60,6 @@ const Signup = () => {
               </div>
             </div>
 
-            {/* Email */}
             <div>
               <label className="block text-xs font-medium text-slate-400 mb-1.5">Email</label>
               <div className="relative">
@@ -70,7 +69,6 @@ const Signup = () => {
               </div>
             </div>
 
-            {/* Role */}
             <div>
               <label className="block text-xs font-medium text-slate-400 mb-1.5">Role</label>
               <div className="grid grid-cols-2 gap-2.5">
@@ -93,7 +91,6 @@ const Signup = () => {
               </div>
             </div>
 
-            {/* Password */}
             <div>
               <label className="block text-xs font-medium text-slate-400 mb-1.5">Password</label>
               <div className="relative">
@@ -110,7 +107,6 @@ const Signup = () => {
               <PasswordStrength password={form.password} />
             </div>
 
-            {/* Confirm Password */}
             <div>
               <label className="block text-xs font-medium text-slate-400 mb-1.5">Confirm Password</label>
               <div className="relative">
@@ -125,7 +121,6 @@ const Signup = () => {
               )}
             </div>
 
-            {/* Submit */}
             <button type="submit" disabled={loading} className="btn-primary w-full !mt-6" id="signup-submit">
               {loading ? (
                 <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -136,7 +131,6 @@ const Signup = () => {
             </button>
           </form>
 
-          {/* Divider */}
           <div className="flex items-center gap-3 my-6">
             <div className="flex-1 h-px bg-white/[0.06]" />
             <span className="text-[0.6875rem] text-slate-500">OR</span>

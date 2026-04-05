@@ -32,7 +32,7 @@ const Login = () => {
         className="w-full max-w-[420px]">
 
         <div className="p-7 sm:p-9 rounded-2xl bg-[rgba(12,12,32,0.85)] backdrop-blur-xl border border-white/[0.06] shadow-2xl">
-          {/* Header Icon */}
+          
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.15, type: 'spring', stiffness: 180 }}
             className="w-14 h-14 mx-auto mb-5 rounded-xl bg-gradient-to-br from-cyan-500/15 to-blue-600/15 border border-cyan-500/15 flex items-center justify-center">
             <HiShieldCheck className="text-2xl text-cyan-400" />
@@ -42,7 +42,7 @@ const Login = () => {
           <p className="text-sm text-slate-400 text-center mb-7">Sign in to your secure account</p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Email */}
+            
             <div>
               <label className="block text-xs font-medium text-slate-400 mb-1.5">Email</label>
               <div className="relative">
@@ -57,7 +57,6 @@ const Login = () => {
               </div>
             </div>
 
-            {/* Password */}
             <div>
               <label className="block text-xs font-medium text-slate-400 mb-1.5">Password</label>
               <div className="relative">
@@ -76,7 +75,6 @@ const Login = () => {
               </div>
             </div>
 
-            {/* Submit */}
             <button type="submit" disabled={loading} className="btn-primary w-full mt-2" id="login-submit">
               {loading ? (
                 <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -87,7 +85,6 @@ const Login = () => {
             </button>
           </form>
 
-          {/* Divider */}
           <div className="flex items-center gap-3 my-6">
             <div className="flex-1 h-px bg-white/[0.06]" />
             <span className="text-[0.6875rem] text-slate-500">OR</span>
@@ -102,7 +99,6 @@ const Login = () => {
           </p>
         </div>
 
-        {/* Security badge */}
         <p className="text-center mt-5 text-[0.6875rem] text-slate-500 flex items-center justify-center gap-1.5">
           <HiLockClosed className="text-emerald-500" />
           Protected with JWT Authentication & bcrypt Hashing

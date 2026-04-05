@@ -35,7 +35,6 @@ const Navbar = () => {
       <div className="mx-3 sm:mx-5 mt-3 rounded-2xl border border-white/[0.06] bg-[rgba(6,6,18,0.92)] backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
 
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-2 shrink-0">
             <HiShieldCheck className="text-cyan-400 text-xl" />
             <span className="font-bold text-[0.9375rem] bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -43,7 +42,6 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* Desktop links */}
           <div className="hidden lg:flex items-center gap-1">
             {links.map(l => (
               <Link key={l.to} to={l.to}
@@ -56,7 +54,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop auth */}
           <div className="hidden lg:flex items-center gap-2.5">
             {authed ? (
               <>
@@ -77,13 +74,11 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Mobile toggle */}
           <button onClick={() => setOpen(!open)} className="lg:hidden text-xl text-slate-300 hover:text-cyan-400 transition-colors">
             {open ? <HiX /> : <HiMenu />}
           </button>
         </div>
 
-        {/* Mobile menu */}
         <AnimatePresence>
           {open && (
             <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.25 }} className="lg:hidden overflow-hidden border-t border-white/[0.06]">

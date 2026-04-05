@@ -29,7 +29,7 @@ const XSSSimulator = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Header */}
+      
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8 sm:mb-10">
         <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-500/8 border border-red-500/15 text-red-400 text-xs font-medium mb-4">
           <HiExclamation /> Educational Purpose Only
@@ -42,7 +42,6 @@ const XSSSimulator = () => {
         </p>
       </motion.div>
 
-      {/* Input */}
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}
         className="mb-6 p-4 sm:p-5 rounded-2xl bg-[rgba(12,12,32,0.6)] border border-white/[0.06]">
         <div className="flex items-center gap-2 mb-3">
@@ -71,9 +70,8 @@ const XSSSimulator = () => {
         </div>
       </motion.div>
 
-      {/* Output comparison */}
       <div className="grid md:grid-cols-2 gap-4 sm:gap-5 mb-6">
-        {/* Vulnerable */}
+        
         <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.25 }}
           className="rounded-2xl overflow-hidden border border-red-500/15">
           <div className="px-4 sm:px-5 py-3 bg-red-500/[0.06] border-b border-red-500/15 flex items-center gap-2">
@@ -88,7 +86,6 @@ const XSSSimulator = () => {
           </div>
         </motion.div>
 
-        {/* Secure */}
         <motion.div initial={{ opacity: 0, x: 16 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.25 }}
           className="rounded-2xl overflow-hidden border border-emerald-500/15">
           <div className="px-4 sm:px-5 py-3 bg-emerald-500/[0.06] border-b border-emerald-500/15 flex items-center gap-2">
@@ -104,7 +101,6 @@ const XSSSimulator = () => {
         </motion.div>
       </div>
 
-      {/* Code analysis */}
       {input && (
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
           className="mb-6 p-4 sm:p-5 rounded-2xl bg-[rgba(12,12,32,0.6)] border border-white/[0.06]">
@@ -116,7 +112,6 @@ const XSSSimulator = () => {
         </motion.div>
       )}
 
-      {/* Explanation */}
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }}
         className="rounded-2xl bg-[rgba(12,12,32,0.6)] border border-white/[0.06] overflow-hidden mb-8">
         <button onClick={() => setShowInfo(!showInfo)}

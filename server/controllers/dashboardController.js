@@ -1,22 +1,6 @@
-/**
- * Dashboard Controller - Returns Demo Security Data
- * 
- * This controller provides demo data for the dashboard page.
- * In a real application, this data would come from actual
- * security monitoring systems and log analysis tools.
- * 
- * For our BCA project, we use realistic-looking sample data
- * to demonstrate how a security dashboard would work.
- */
-
-/**
- * @desc    Get dashboard statistics
- * @route   GET /api/dashboard/stats
- * @access  Private
- */
 const getStats = async (req, res) => {
   try {
-    // Demo statistics data - simulates real security metrics
+
     const stats = {
       totalUsers: 156,
       activesessions: 23,
@@ -31,14 +15,9 @@ const getStats = async (req, res) => {
   }
 };
 
-/**
- * @desc    Get fake login attempt logs (demo data)
- * @route   GET /api/dashboard/logs
- * @access  Private
- */
 const getLogs = async (req, res) => {
   try {
-    // Demo login attempt logs - simulates security monitoring
+
     const logs = [
       {
         id: 1,
@@ -120,11 +99,6 @@ const getLogs = async (req, res) => {
   }
 };
 
-/**
- * @desc    Get security tips
- * @route   GET /api/dashboard/tips
- * @access  Private
- */
 const getTips = async (req, res) => {
   try {
     const tips = [
